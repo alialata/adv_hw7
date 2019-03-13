@@ -2,6 +2,8 @@ language: python
 script:
   - pip install coveralls
   - pip install coverage
+  - coverage run --source=mypkg test_rpn.py test
+  - coveralls
   - coverage run test_rpn.py
   - coverage report
   - python test_rpn.py
